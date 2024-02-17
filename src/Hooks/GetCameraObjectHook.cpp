@@ -6,7 +6,7 @@
 bool GetCameraObjectHook::Prepare()
 {
     std::array<uintptr_t, 1> address_array = { AsAddress(dku::Hook::Assembly::search_pattern<
-        "E8 ?? ?? ?? ?? 48 85 C0 74 ?? F3 0F 11 70 60 0F ?? ?? ?? ?? 48">()) };
+        "89 45 67 48 8D 45 D7 48 89 45 67 45 33 E4 4C 89 65 D7 4C 89">()) };
     addresses = address_array;
 
     all_found = true;
